@@ -6,12 +6,6 @@ const helper = {
     db.query(queryProducts, (err, results) => {
       callback(err, results);
     })
-  }),
-  getInstagram: ((callback) => {
-    let queryInstagram = `SELECT picture_url, username, description, link, product_used1, product_used2, product_used3`;
-    db.query(queryInstagram, (err, results) => {
-      callback(err, results);
-    })
   })
 }
 
