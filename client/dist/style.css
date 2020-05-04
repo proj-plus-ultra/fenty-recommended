@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+#header {
+  color: #000000;
+  font-family: 'brown-regular', 'Questrial', Times, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.583rem;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  /* color: red; */
+}
+
+.recommended {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
