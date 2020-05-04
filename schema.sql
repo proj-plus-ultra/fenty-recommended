@@ -7,7 +7,7 @@ CREATE TABLE products(
   name VARCHAR(255) NOT NULL,
   description VARCHAR(255),
   price VARCHAR(255) NOT NULL,
-  rating_star INT NOT NULL,
+  rating_star FLOAT(1) NOT NULL,
   rating_num INT NOT NULL,
   fav BOOLEAN NOT NULL,
   more_shades BOOLEAN NOT NULL,
