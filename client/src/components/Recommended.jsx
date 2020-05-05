@@ -56,8 +56,8 @@ class Recommended extends React.Component {
   render() {
     return (
       <div className="recommended">
-        <h3 id="header">plays nice with</h3>
-        <span id="carousel">
+        <h3 id="recommended-header">plays nice with</h3>
+        <span id="recommended-carousel">
           <RecommendedList items={this.state.carousel}/>
         </span>
       </div>
