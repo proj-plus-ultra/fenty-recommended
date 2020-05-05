@@ -1,18 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
-#header {
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.recommended {
+  background-image: url('Related\ bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#recommended-carousel {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.recommended-column {
+  display: inline-block;
+  padding: 10px;
+  top: 0;
+}
+
+#recommended-header {
   color: #000000;
-  font-family: 'brown-regular', 'Questrial', Times, Arial, sans-serif;
+  font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
   font-weight: 400;
   font-size: 1.583rem;
   line-height: 20px;
   letter-spacing: 3px;
   text-align: center;
   text-transform: uppercase;
-  /* color: red; */
+  margin-bottom: 20px;
 }
 
-.recommended {
-  padding-top: 80px;
-  padding-bottom: 80px;
+#recommended-img {
+  min-height: 31.6093px;
+  margin: 0 auto;
+  /* float: left; */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* width: 264px;
+  height: 330.45px; */
+  width: 16vw;
+  height: 28vh;
+}
+
+#recommended-fav {
+  color: #000;
+  font-family: 'brown-bold', 'Questrial', 'Times', 'Arial',
+  'sans-serif';
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 25px;
+  margin-top: 1.5rem;
+  letter-spacing: 3px;
+  min-height: 25px;
+  text-align: center;
+}
+
+#recommended-name {
+  color: #000;
+  font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+#recommended-description {
+  color: #000;
+  font-family: 'brown-bold', 'Questrial', 'Times', 'Arial', 'sans-serif';
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-top: 9px;
+}
+
+#recommended-price {
+  color: #000;
+  font-family: 'Times', 'Arial', 'sans-serif';
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#recommended-shades {
+  color: #000;
+  font-family: 'Times', 'Arial', 'sans-serif';
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-top: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#recommended-rating {
+  color: #000;
+  font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
+  text-align: center;
+  font-size: 14px;
 }
