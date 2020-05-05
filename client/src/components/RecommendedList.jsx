@@ -1,14 +1,15 @@
 import React from 'react';
-import RecommendedItem from './RecommendedItem.jsx'
+import RecommendedItem from './RecommendedItem.jsx';
+
 
 const RecommendedList = (props) => {
   return (
-    <div>
+    <span className="recommended-product">
       {props.items.map((item, index) => {
-        console.log(item)
+        console.log(item);
         return <RecommendedItem item={item} key={index} index={index}/>
       })}
-    </div>
+    </span>
   )
 }
 
