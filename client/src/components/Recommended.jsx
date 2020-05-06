@@ -42,7 +42,7 @@ class Recommended extends React.Component {
     filterCategory(this.state.products, this.props.category);
     let carouselItems = [];
     const pickSeven = (array) => {
-      for (let i = 0; i < 7; i++) {
+      for (let i = 0; i < 10; i++) {
         let num = Math.floor(Math.random() * array.length);
         carouselItems.push(array[num]);
         array.splice(num, 1);
@@ -62,7 +62,7 @@ class Recommended extends React.Component {
           <div>
             <CarouselProvider
               visibleSlides={1}
-              totalSlides={7}
+              totalSlides={2}
               infinite={true}
               dragStep={1}
             >
