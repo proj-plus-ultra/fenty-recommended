@@ -21,10 +21,16 @@
   padding-bottom: 80px;
 }
 
+#recommended-product {
+  width: 95%;
+  max-width: 970px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .recommended-column {
   display: inline-block;
   padding: 10px;
-  top: 0;
 }
 
 #recommended-header {
@@ -48,8 +54,8 @@
   cursor: pointer;
   /* width: 264px;
   height: 330.45px; */
-  width: 16vw;
-  height: 28vh;
+  width: 14.256vw;
+  height: 25.881vh;
 }
 
 #recommended-fav {
