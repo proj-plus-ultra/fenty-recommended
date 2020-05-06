@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import RecommendedList from './RecommendedList.jsx';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 
 class Recommended extends React.Component {
   constructor(props) {
@@ -56,11 +57,20 @@ class Recommended extends React.Component {
   render() {
     return (
       <div className="recommended">
-        <div id="recommended-carousel">
+        <div id="recommended-carousel" value={this.props.category}>
           <h3 id="recommended-header">plays nice with</h3>
-          <span>
-            <RecommendedList items={this.state.carousel}/>
-          </span>
+          <div>
+            <CarouselProvider
+              visibleSlides={1}
+              totalSlides={7}
+              infinite={true}
+              dragStep={1}
+            >
+              <Slider>
+                <RecommendedList items={this.state.carousel}/>
+              </Slider>
+            </CarouselProvider>
+          </div>
         </div>
       </div>
     )
