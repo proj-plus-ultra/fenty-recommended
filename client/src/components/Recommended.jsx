@@ -1,10 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import RecommendedList from './RecommendedList.jsx';
+import RecommendedItem from './RecommendedItem.jsx';
 import Slider from "react-slick";
-
-import StarRatingComponent from 'react-star-rating-component';
-
 
 class Recommended extends React.Component {
   constructor(props) {
@@ -46,7 +43,7 @@ class Recommended extends React.Component {
     filterCategory(this.state.products, this.props.category);
     let carouselItems = [];
     const pickSeven = (array) => {
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 6; i++) {
         let num = Math.floor(Math.random() * array.length);
         carouselItems.push(array[num]);
         array.splice(num, 1);
@@ -72,29 +69,15 @@ class Recommended extends React.Component {
         <div id="recommended-carousel" value={this.props.category}>
           <h3 id="recommended-header">plays nice with</h3>
           <div>
-            <Slider {...settings}>
-              <div>
-                <img id="recommended-img" src={this.state.oneItem.foreground}/>
-                <div id="recommended-fav">{(this.state.oneItem.fav)? "RIHANNA'S FAV" : null}</div>
-                <div id="recommended-name">{this.state.oneItem.name}</div>
-                <div id="recommended-description">{this.state.oneItem.description}</div>
-                <div id="recommended-price">{this.state.oneItem.price}</div>
-                <div id="recommended-shades">{(this.state.oneItem.more_shades) ? "MORE SHADES +" : null}</div>
-                <div id="recommended-rating"><StarRatingComponent name={'rating'} value={this.state.oneItem.rating_star} starColor={"Black"} emptyStarColor={"Gray"}/> ({this.state.oneItem.rating_num})</div>
-              </div>
-              <div>
-                <img src="http://placekitten.com/g/400/200" />
-              </div>
-              <div>
-                <img src="http://placekitten.com/g/400/200" />
-              </div>
-              <div>
-                <img src="http://placekitten.com/g/400/200" />
-              </div>
-            </Slider>
-
-            </div>
+              <Slider {...settings}>
+                  {this.state.carousel.map((item, index) => {
+                    return (<div>
+                      <RecommendedItem item={item} key={index} index={index} />
+                    </div>)
+                  })}
+              </Slider>
           </div>
+        </div>
       </div>
     )
   }
