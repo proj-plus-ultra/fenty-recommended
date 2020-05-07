@@ -5,9 +5,11 @@ let ArrowNext = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "black" }}
+      // style={{ ...style, display: "block" }}
       onClick={onClick}
-    />
+      >
+      <img src="https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/nextArrow.png" alt="arrow_left"/>
+    </div>
   );
 }
 

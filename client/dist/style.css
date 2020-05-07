@@ -13,7 +13,7 @@
 .recommended {
   background-image: url('Related\ bg.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   color: #000000;
   font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
   text-align: center;
@@ -100,11 +100,13 @@
 
 
 .slick-prev {
+  /* background-image: url(https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/prevArrow.png) center center no-repeat!important */
   left: -15% !important;
   z-index: 1;
 }
 
 .slick-next {
+  /* background-image: url(https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/nextArrow.png) center center no-repeat!important */
   right: -15% !important;
   z-index: 1;
 }
