@@ -1,14 +1,18 @@
 import React from 'react';
 import axios from 'axios';
 import RecommendedList from './RecommendedList.jsx';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import Slider from "react-slick";
+
+import StarRatingComponent from 'react-star-rating-component';
+
 
 class Recommended extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       products: [],
-      carousel: []
+      carousel: [],
+      oneItem: ''
     }
     this.getProducts = this.getProducts.bind(this);
     this.carouselItems = this.carouselItems.bind(this);
@@ -50,28 +54,47 @@ class Recommended extends React.Component {
     };
     pickSeven(filtered);
     this.setState({
-      carousel: carouselItems
+      carousel: carouselItems,
+      oneItem: carouselItems[0]
     });
   }
 
   render() {
+    const settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    }
+    console.log(this.state.oneItem)
     return (
       <div className="recommended">
         <div id="recommended-carousel" value={this.props.category}>
           <h3 id="recommended-header">plays nice with</h3>
           <div>
-            <CarouselProvider
-              visibleSlides={1}
-              totalSlides={2}
-              infinite={true}
-              dragStep={1}
-            >
-              <Slider>
-                <RecommendedList items={this.state.carousel}/>
-              </Slider>
-            </CarouselProvider>
+            <Slider {...settings}>
+              <div>
+                <img id="recommended-img" src={this.state.oneItem.foreground}/>
+                <div id="recommended-fav">{(this.state.oneItem.fav)? "RIHANNA'S FAV" : null}</div>
+                <div id="recommended-name">{this.state.oneItem.name}</div>
+                <div id="recommended-description">{this.state.oneItem.description}</div>
+                <div id="recommended-price">{this.state.oneItem.price}</div>
+                <div id="recommended-shades">{(this.state.oneItem.more_shades) ? "MORE SHADES +" : null}</div>
+                <div id="recommended-rating"><StarRatingComponent name={'rating'} value={this.state.oneItem.rating_star} starColor={"Black"} emptyStarColor={"Gray"}/> ({this.state.oneItem.rating_num})</div>
+              </div>
+              <div>
+                <img src="http://placekitten.com/g/400/200" />
+              </div>
+              <div>
+                <img src="http://placekitten.com/g/400/200" />
+              </div>
+              <div>
+                <img src="http://placekitten.com/g/400/200" />
+              </div>
+            </Slider>
+
+            </div>
           </div>
-        </div>
       </div>
     )
   }

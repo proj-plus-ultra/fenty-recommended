@@ -9,24 +9,28 @@ module.exports = {
     path: DIST_DIR
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js[x]?/,
         include: SRC_DIR,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins:['@babel/plugin-proposal-class-properties']
         }
-      }
-    ],
-    rules: [
+      },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader','sass-loader']
-      }
+        use: ['style-loader', 'css-loader']
+      },
+    {
+      test: /\.(eot|woff|woff2|gif|svg|ttf)([\?]?.*)$/,
+      use: ['file-loader']
+    }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
 };

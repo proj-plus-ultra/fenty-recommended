@@ -33,17 +33,15 @@ class RecommendedItem extends React.Component {
 
 render() {
   return (
-    <span className="recommended-column">
-      <span>
-      <img id="recommended-img"src={this.state.picture} onMouseEnter={() => {this.toggleState()}} onMouseLeave={() => {this.toggleState()}}></img>
+    <div className="recommended-column">
+      <img id="recommended-img"src={this.state.picture} onMouseEnter={() => {this.toggleState()}} onMouseLeave={() => {this.toggleState()}}/>
       <div id="recommended-fav">{(this.props.item.fav)? "RIHANNA'S FAV" : null}</div>
       <div id="recommended-name">{this.props.item.name}</div>
       <div id="recommended-description">{this.props.item.description}</div>
       <div id="recommended-price">{this.props.item.price}</div>
       <div id="recommended-shades">{(this.props.item.more_shades)? "MORE SHADES +" : null}</div>
       <div id="recommended-rating"><StarRatingComponent name={'rating'} value={this.props.item.rating_star} starColor={"Black"} emptyStarColor={"Gray"}/> ({this.props.item.rating_num})</div>
-    </span>
-  </span>
+  </div>
   )
 }
 }

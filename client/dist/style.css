@@ -14,6 +14,9 @@
   background-image: url('Related\ bg.png');
   background-repeat: no-repeat;
   background-size: 100%;
+  color: #000000;
+  font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
+  text-align: center;
 }
 
 #recommended-carousel {
@@ -21,60 +24,46 @@
   padding-bottom: 80px;
 }
 
-#recommended-product {
+.recommended #recommended-product {
   width: 95%;
   max-width: 970px;
   margin: 0 auto;
   position: relative;
 }
 
-.recommended-column {
+.recommended .recommended-column {
   display: inline-block;
   padding: 10px;
 }
 
-#recommended-header {
-  color: #000000;
-  font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
+.recommended #recommended-header {
   font-weight: 400;
   font-size: 1.583rem;
   line-height: 20px;
   letter-spacing: 3px;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
-#recommended-img {
+.recommended #recommended-img {
   min-height: 31.6093px;
   margin: 0 auto;
-  /* float: left; */
-  display: flex;
   align-items: center;
   cursor: pointer;
-  /* width: 264px;
-  height: 330.45px; */
-  width: 16.687vw;
-  height: 27.124vh;
+  /* width: 16.687vw; */
+  /* height: 27.124vh; */
 }
 
-#recommended-fav {
-  color: #000;
-  font-family: 'brown-bold', 'Questrial', 'Times', 'Arial',
-  'sans-serif';
+.recommended #recommended-fav {
   font-weight: bold;
   font-size: 10px;
   line-height: 25px;
   margin-top: 1.5rem;
   letter-spacing: 3px;
   min-height: 25px;
-  text-align: center;
 }
 
-#recommended-name {
-  color: #000;
-  font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
-  text-align: center;
+.recommended #recommended-name {
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -82,41 +71,48 @@
   cursor: pointer;
 }
 
-#recommended-description {
-  color: #000;
-  font-family: 'brown-bold', 'Questrial', 'Times', 'Arial', 'sans-serif';
-  text-align: center;
+.recommended #recommended-description {
   font-size: 12px;
   font-weight: 600;
   line-height: 25px;
   margin-top: 9px;
 }
 
-#recommended-price {
-  color: #000;
-  font-family: 'Times', 'Arial', 'sans-serif';
+.recommended #recommended-price {
   font-size: 11px;
   font-weight: 700;
   line-height: 25px;
   letter-spacing: 3px;
   margin-top: 5px;
-  text-align: center;
 }
 
-#recommended-shades {
-  color: #000;
-  font-family: 'Times', 'Arial', 'sans-serif';
+.recommended #recommended-shades {
   font-size: 12px;
   font-weight: 600;
   line-height: 25px;
   margin-top: 8px;
-  text-align: center;
   cursor: pointer;
 }
 
-#recommended-rating {
-  color: #000;
-  font-family: 'brown-regular', 'Questrial', 'Times', 'Arial', 'sans-serif';
-  text-align: center;
+.recommended #recommended-rating {
   font-size: 14px;
 }
+
+/* .slides {
+  position: relative;
+} */
+
+/* .slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+} */
+
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+
