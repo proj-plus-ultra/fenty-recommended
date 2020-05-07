@@ -1,7 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import RecommendedItem from './RecommendedItem.jsx';
-import Slider from "react-slick";
+import Slider from 'react-slick';
+
+
+import ArrowPrev from './ArrowPrev.jsx';
+import ArrowNext from './ArrowNext.jsx';
 
 class Recommended extends React.Component {
   constructor(props) {
@@ -62,17 +66,19 @@ class Recommended extends React.Component {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
+      nextArrow: <ArrowNext />,
+      prevArrow: <ArrowPrev />
     }
     console.log(this.state.oneItem)
     return (
       <div className="recommended">
         <div id="recommended-carousel" value={this.props.category}>
           <h3 id="recommended-header">plays nice with</h3>
-          <div>
+          <div id="recommended-product">
               <Slider {...settings}>
                   {this.state.carousel.map((item, index) => {
-                    return (<div>
-                      <RecommendedItem item={item} key={index} index={index} />
+                    return (<div key={index}>
+                      <RecommendedItem item={item} index={index} />
                     </div>)
                   })}
               </Slider>
