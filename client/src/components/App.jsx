@@ -24,7 +24,6 @@ class App extends React.Component {
 
 
   render() {
-    console.log(this.state.category)
     return (
       <div>
         <Recommended category={this.state.category}/>

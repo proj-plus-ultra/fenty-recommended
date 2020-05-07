@@ -69,7 +69,6 @@ class Recommended extends React.Component {
       nextArrow: <ArrowNext />,
       prevArrow: <ArrowPrev />
     }
-    console.log(this.state.oneItem)
     return (
       <div className="recommended">
         <div id="recommended-carousel" value={this.props.category}>
