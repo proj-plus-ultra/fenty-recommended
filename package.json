@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "nodemon server/index.js",
     "webpack": "webpack -d --watch",
-    "seed": "mysql -u root < schema.sql"
+    "seed": "node database/seed.js"
   },
   "repository": {
     "type": "git",
