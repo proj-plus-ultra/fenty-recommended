@@ -1,4 +1,4 @@
-const db = require('./')
+const db = require('./');
 
 const products = [
   "INSERT INTO products (name, description, price, rating_star, rating_num, fav, more_shades, category, foreground, background) VALUES ('FACE & BODY KABUKI BRUSH 120', '', '$34', 4.6, 30, TRUE, FALSE, 'TOOLS', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/1a.png', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/1b.png');",
