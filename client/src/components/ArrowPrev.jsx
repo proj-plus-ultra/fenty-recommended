@@ -11,6 +11,6 @@ const ArrowPrev = (props) => {
       <img src="https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/prevArrow.png" alt="arrow_left"/>
     </div>
   );
-}
+};
 
 export default ArrowPrev;

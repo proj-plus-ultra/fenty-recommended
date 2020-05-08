@@ -3,10 +3,10 @@ import Recommended from './Recommended.jsx';
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       category: ''
-    }
+    };
     this.getRandomProduct = this.getRandomProduct.bind(this);
   }
 
@@ -19,7 +19,7 @@ class App extends React.Component {
     let pickRandom = Math.floor(Math.random() * categories.length);
     this.setState({
       category: categories[pickRandom]
-    })
+    });
   }
 
   render() {
@@ -27,7 +27,7 @@ class App extends React.Component {
       <div>
         <Recommended category={this.state.category}/>
       </div>
-    )
+    );
   }
 }
 

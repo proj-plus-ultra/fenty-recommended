@@ -1,64 +1,115 @@
-// module.exports = {
-//   env: {
-//     browser: true,
-//     es6: true,
-//   },
-//   extends: [
-//     'plugin:react/recommended',
-//     'airbnb',
+// {
+//   "extends": [
+//     "airbnb",
+//     "prettier",
+//     "prettier/react"
 //   ],
-//   globals: {
-//     Atomics: 'readonly',
-//     SharedArrayBuffer: 'readonly',
+//   "parser": "babel-eslint",
+//   "parserOptions": {
+//     "ecmaVersion": 8,
+//     "ecmaFeatures": {
+//       "experiementalObjectRestSpread": true,
+//       "impliedStrict": true,
+//       "classes": true
+//     }
 //   },
-//   parserOptions: {
-//     ecmaFeatures: {
-//       jsx: true,
-//     },
-//     ecmaVersion: 2018,
-//     sourceType: 'module',
+//   "env": {
+//     "browser": true,
+//     "node": true,
+//     "jquery": true
 //   },
-//   plugins: [
-//     'react',
-//   ],
-//   rules: {
-//   /* Indentation */
-//   'no-mixed-spaces-and-tabs': 2,
-//   'indent': [2, 2],
-//   /* Variable cames */
-//   'camelcase': 2,
-//   /* Language constructs */
-//   'curly': 2,
-//   'eqeqeq': [2, 'smart'],
-//   'func-style': [2, 'expression'],
-//   /* Semicolons */
-//   'semi': 2,
-//   'no-extra-semi': 2,
-//   /* Padding & additional whitespace (perferred but optional) */
-//   'brace-style': [2, '1tbs', { 'allowSingleLine': true }],
-//   'semi-spacing': 1,
-//   'key-spacing': 1,
-//   'block-spacing': 1,
-//   'comma-spacing': 1,
-//   'no-multi-spaces': 1,
-//   'space-before-blocks': 1,
-//   'keyword-spacing': [1, { 'before': true, 'after': true }],
-//   'space-infix-ops': 1,
-//   /* Variable declaration */
-//   'one-var': [1, { 'uninitialized': 'always', 'initialized': 'never' }],
-//   /* Minuta */
-//   'comma-style': [2, 'last'],
-//   'quotes': [1, 'single']
+//   "rules": {
+//     "no-unused-vars": [
+//       1,
+//       {
+//         "argsIgnorePattern": "res|next|^err"
+//       }
+//     ],
+//     "arrow-body-style": [
+//       2,
+//       "as-needed"
+//     ],
+//     "no-param-reassign": [
+//       2,
+//       {
+//         "props": false
+//       }
+//     ],
+//     "no-console": 0,
+//     "import/prefer-default-export": 0,
+//     "import": 0,
+//     "func-names": 0,
+//     "space-before-function-paren": 0,
+//     "comma-dangel": 0,
+//     "max-len": 0,
+//     "import/extensions": 0,
+//     "no-underscore-dangle": 0,
+//     "consistent-return": 0,
+//     "react/display-name": 1,
+//     "react/react-in-jsx-scope": 0,
+//     "react/forbid-prop-types": 0,
+//     "react/no-unescaped-entities": 0,
+//     "jsx-a11y/accessible-emoji": 0,
+//     "react/jsx-filename-extension": [
+//       1,
+//       {
+//         "extensions": [
+//           ".js",
+//           ".jsx"
+//         ]
+//       }
+//     ],
+//     "radix": 0,
+//     "no-shadow": [
+//       2,
+//       {
+//         "hoist": "all",
+//         "allow": [
+//           "resolve",
+//           "reject",
+//           "done",
+//           "next",
+//           "err",
+//           "error"
+//         ]
+//       }
+//     ],
+//     "quotes": [
+//       2,
+//       "single",
+//       {
+//         "avoidEscape": true,
+//         "allowTemplateLiterals": true
+//       }
+//     ],
+//     "prettier/prettier": [
+//       "error",
+//       {
+//         "trailingComma": "es5",
+//         "singleQuote": true,
+//         "printWidth": 120,
+//       }
+//     ],
+//     "jsx-a11y/href-no-has": "off",
+//     "jsx-a11y/anchor-is-valid": [
+//       "warn",
+//       {
+//         "aspects": [
+//           "invalidHref"
+//         ]
+//       }
+//     ]
 //   },
-// };
-
-/**
- * These rules enforce the Hack Reactor Style Guide
- *
- * Visit this repo for more information:
- *   https://github.com/reactorcore/eslint-config-hackreactor
- */
+//   "plugins": [
+//     // "html"
+//     "prettier"
+//   ]
+// }
 
 module.exports = {
-  extends: './node_modules/eslint-config-hackreactor/index.js'
+  extends: 'hackreactor',
+  rules: {
+    // Rules here will override the 'hackreactor' configuration
+    // http://eslint.org/docs/rules/
+  }
 };
