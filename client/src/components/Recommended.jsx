@@ -68,7 +68,7 @@ class Recommended extends React.Component {
       slidesToScroll: 1,
       nextArrow: <ArrowNext />,
       prevArrow: <ArrowPrev />
-    }
+    };
     return (
       <div className="recommended">
         <div id="recommended-carousel" value={this.props.category}>
