@@ -4,10 +4,11 @@
   "description": "Fenty recommended component",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest",
+    "seed": "node database/seed.js",
     "start": "nodemon server/index.js",
-    "webpack": "webpack -d --watch",
-    "seed": "node database/seed.js"
+    "test": "jest",
+    "test-watch": "jest --watchAll",
+    "webpack": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,9 @@
     "chai": "^4.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "file-loader": "^6.0.0",
+    "file-loader": "^1.1.6",
     "html-webpack-plugin": "^4.3.0",
+    "jquery": "^3.5.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.3",
@@ -39,20 +41,32 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
+    "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
-    "babel-core": "^6.23.1",
-    "babel-loader": "^8.0.5",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.6.5",
     "css-loader": "^3.5.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "jest": "^26.0.1",
+    "jest-environment-enzyme": "^7.1.1",
+    "jest-enzyme": "^7.1.1",
+    "regenerator-runtime": "^0.13.5",
     "resize-observer-polyfill": "^1.5.1",
     "style-loader": "^1.2.1",
+    "supertest": "^4.0.2",
     "webpack-cli": "^3.3.11"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

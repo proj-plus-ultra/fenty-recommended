@@ -18,3 +18,5 @@ app.use('/fenty', router);
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+
+module.exports = app;
