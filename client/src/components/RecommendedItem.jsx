@@ -47,4 +47,3 @@ class RecommendedItem extends React.Component {
 }
 
 export default RecommendedItem;
-
