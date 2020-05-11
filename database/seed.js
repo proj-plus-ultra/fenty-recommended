@@ -1,4 +1,4 @@
-const db = require('./');
+const db = require('.');
 
 const products = [
   "INSERT INTO products (name, description, price, rating_star, rating_num, fav, more_shades, category, foreground, background) VALUES ('FACE & BODY KABUKI BRUSH 120', '', '$34', 4.6, 30, TRUE, FALSE, 'TOOLS', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/1a.png', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/1b.png');",
@@ -98,11 +98,11 @@ const products = [
   "INSERT INTO products (name, description, price, rating_star, rating_num, fav, more_shades, category, foreground, background) VALUES ('FAIRY BOMB SHIMMER POWDER', 'Coppa Chill', '$28', 4.9, 50, FALSE,TRUE, 'BODY PRODUCT',  'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/96A.png', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/96B.png');",
   "INSERT INTO products (name, description, price, rating_star, rating_num, fav, more_shades, category, foreground, background) VALUES ('FAIRY BOMB SHIMMER POWDER', '24Kray', '$28', 4.9, 50, FALSE,TRUE, 'BODY PRODUCT',  'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/97A.png', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/97B.png');",
   "INSERT INTO products (name, description, price, rating_star, rating_num, fav, more_shades, category, foreground, background) VALUES ('FAIRY BOMB SHIMMER POWDER', 'Trophy Wife', '$28', 4.9, 50, FALSE,TRUE, 'BODY PRODUCT',  'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/98A.png', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/98B.png');",
-  "INSERT INTO products (name, description, price, rating_star, rating_num, fav, more_shades, category, foreground, background) VALUES ('PRO FILTR INSTANT RETOUCH PRIMER', '', '$32', 4.6, 254, TRUE, FALSE, 'FACE PRODUCT',  'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/99A.png', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/99B.png');"
+  "INSERT INTO products (name, description, price, rating_star, rating_num, fav, more_shades, category, foreground, background) VALUES ('PRO FILTR INSTANT RETOUCH PRIMER', '', '$32', 4.6, 254, TRUE, FALSE, 'FACE PRODUCT',  'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/99A.png', 'https://fenty-db.s3-us-west-1.amazonaws.com/Fenty+SS/99B.png');",
 ];
 
 const seedDb = () => {
-  products.forEach(item => db.query(item));
+  products.forEach((item) => db.query(item));
 };
 
 seedDb();

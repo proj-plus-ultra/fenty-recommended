@@ -1,11 +1,11 @@
 import React from 'react';
-import Recommended from './Recommended.jsx';
+import Recommended from './Recommended';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: ''
+      category: '',
     };
     this.getRandomProduct = this.getRandomProduct.bind(this);
   }
@@ -15,17 +15,18 @@ class App extends React.Component {
   }
 
   getRandomProduct() {
-    let categories = ['TOOLS', 'FACE PRODUCT', 'LIP PRODUCT', 'EYE PRODUCT', 'BODY PRODUCT'];
-    let pickRandom = Math.floor(Math.random() * categories.length);
+    const categories = ['TOOLS', 'FACE PRODUCT', 'LIP PRODUCT', 'EYE PRODUCT', 'BODY PRODUCT'];
+    const pickRandom = Math.floor(Math.random() * categories.length);
     this.setState({
-      category: categories[pickRandom]
+      category: categories[pickRandom],
     });
   }
 
   render() {
+    const { category } = this.state;
     return (
       <div>
-        <Recommended category={this.state.category}/>
+        <Recommended category={category} />
       </div>
     );
   }
