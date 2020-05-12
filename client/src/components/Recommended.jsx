@@ -37,9 +37,7 @@ class Recommended extends React.Component {
   carouselItems() {
     const filtered = [];
     const filterCategory = (products, category) => {
-      products.map((product) =>
-        product.category === category ? filtered.push(product) : null,
-      );
+      products.map((product) => (product.category === category ? filtered.push(product) : null));
     };
     filterCategory(this.state.products, this.props.category);
     const carouselItems = [];
