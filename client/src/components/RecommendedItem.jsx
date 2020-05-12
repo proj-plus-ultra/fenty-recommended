@@ -1,5 +1,5 @@
 import React from 'react';
-import StarRatingComponent from 'react-star-rating-component';
+import StarRatings from 'react-star-ratings';
 
 class RecommendedItem extends React.Component {
   constructor(props) {
@@ -64,11 +64,13 @@ class RecommendedItem extends React.Component {
         <div id="recommended-price">{price}</div>
         <div id="recommended-shades">{moreShades ? 'MORE SHADES +' : null}</div>
         <div id="recommended-rating">
-          <StarRatingComponent
+          <StarRatings
+            rating={ratingStar}
+            starRatedColor="rgb(0,0,0)"
+            starEmptyColor="rgb(169,169,169)"
+            starDimension="16px"
+            starSpacing=".5px"
             name="rating"
-            value={ratingStar}
-            starColor="Black"
-            emptyStarColor="Gray"
           />
           ({ratingNum})
         </div>
