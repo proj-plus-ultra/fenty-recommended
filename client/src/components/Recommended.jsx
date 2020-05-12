@@ -1,11 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import RecommendedItem from './RecommendedItem.jsx';
 import Slider from 'react-slick';
-
-
-import ArrowPrev from './ArrowPrev.jsx';
-import ArrowNext from './ArrowNext.jsx';
+import RecommendedItem from './RecommendedItem';
+import ArrowPrev from './ArrowPrev';
+import ArrowNext from './ArrowNext';
 
 class Recommended extends React.Component {
   constructor(props) {
@@ -13,7 +11,6 @@ class Recommended extends React.Component {
     this.state = {
       products: [],
       carousel: [],
-      oneItem: ''
     };
     this.getProducts = this.getProducts.bind(this);
     this.carouselItems = this.carouselItems.bind(this);
@@ -28,27 +25,27 @@ class Recommended extends React.Component {
       .get('/fenty/products')
       .then((data) => {
         this.setState({
-          products: data.data
+          products: data.data,
         });
       })
       .then(() => {
         this.carouselItems();
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }
 
   carouselItems() {
-    let filtered = [];
+    const filtered = [];
     const filterCategory = (products, category) => {
       products.map((product) =>
-        (product.category === category) ? filtered.push(product) : null
+        product.category === category ? filtered.push(product) : null,
       );
     };
     filterCategory(this.state.products, this.props.category);
-    let carouselItems = [];
+    const carouselItems = [];
     const pickSeven = (array) => {
-      for (let i = 0; i < 6; i++) {
-        let num = Math.floor(Math.random() * array.length);
+      for (let i = 0; i < 6; i += 1) {
+        const num = Math.floor(Math.random() * array.length);
         carouselItems.push(array[num]);
         array.splice(num, 1);
       }
@@ -56,7 +53,6 @@ class Recommended extends React.Component {
     pickSeven(filtered);
     this.setState({
       carousel: carouselItems,
-      oneItem: carouselItems[0]
     });
   }
 
@@ -67,7 +63,7 @@ class Recommended extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       nextArrow: <ArrowNext />,
-      prevArrow: <ArrowPrev />
+      prevArrow: <ArrowPrev />,
     };
     return (
       <div className="recommended">
@@ -75,11 +71,11 @@ class Recommended extends React.Component {
           <h3 id="recommended-header">plays nice with</h3>
           <div id="recommended-product">
             <Slider {...settings}>
-              {this.state.carousel.map((item, index) => {
-                return (<div key={index}>
+              {this.state.carousel.map((item, index) => (
+                <div key={index}>
                   <RecommendedItem item={item} index={index} />
-                </div>);
-              })}
+                </div>
+              ))}
             </Slider>
           </div>
         </div>

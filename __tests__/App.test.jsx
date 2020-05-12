@@ -1,14 +1,14 @@
 /* eslint-env jest */
-import React from 'react';
-import { shallow } from 'enzyme';
-import axios from 'axios';
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+// import React from 'react';
+// import { shallow } from 'enzyme';
+// import axios from 'axios';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
-process.env.NODE_ENV = "test";
-const db = require("../database");
-const server = require("../server");
-const request = require("supertest");
+process.env.NODE_ENV = 'test';
+const request = require('supertest');
+// const db = require('../database');
+const server = require('../server');
 
 // import App from '../client/src/components/App.jsx';
 
