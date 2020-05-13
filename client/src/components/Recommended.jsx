@@ -15,15 +15,15 @@ class Recommended extends React.Component {
       products: [],
       carousel: [],
     };
-    this.getProducts = this.getProducts.bind(this);
+    this.getRelatedProducts = this.getRelatedProducts.bind(this);
     this.carouselItems = this.carouselItems.bind(this);
   }
 
   componentDidMount() {
-    this.getProducts();
+    this.getRelatedProducts();
   }
 
-  getProducts() {
+  getRelatedProducts() {
     axios
       .get('http://localhost:1337/fenty/products')
       .then((data) => {
