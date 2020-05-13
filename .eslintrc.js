@@ -5,6 +5,7 @@ module.exports = {
   rules: {
     //You can override any rules you want
     'no-console': 'off',
+    'no-undef': 'off',
     'object-curly-newline': 'off',
     'react/destructuring-assignment': 'off',
     'react/jsx-filename-extension': 'off',

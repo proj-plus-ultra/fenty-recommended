@@ -5,6 +5,9 @@ import RecommendedItem from './RecommendedItem';
 import ArrowPrev from './ArrowPrev';
 import ArrowNext from './ArrowNext';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 class Recommended extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +25,7 @@ class Recommended extends React.Component {
 
   getProducts() {
     axios
-      .get('/fenty/products')
+      .get('http://localhost:1337/fenty/products')
       .then((data) => {
         this.setState({
           products: data.data,
