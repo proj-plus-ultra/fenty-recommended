@@ -4,7 +4,7 @@ const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'fentyRelated',
+  database: 'fentyRecommended',
 });
 
 con.connect((err) => {

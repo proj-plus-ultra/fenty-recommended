@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS fentyRelated;
-CREATE DATABASE fentyRelated;
-USE fentyRelated;
+DROP DATABASE IF EXISTS fentyRecommended;
+CREATE DATABASE fentyRecommended;
+USE fentyRecommended;
 
 CREATE TABLE products(
   id INT AUTO_INCREMENT PRIMARY KEY,
